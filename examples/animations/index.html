@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>CSS3 Animations</title>
+	<script type="text/javascript" src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<style type="text/css">
+	/* <![CDATA[ */
+	#images {
+		margin-bottom: 50px;
+	}
+
+	#images .span3 {
+		width: 100px;
+		height: 100px;
+		position: relative;
+		border: 1px solid #CCC;
+	}
+
+	#images .icon-thumbs-up {
+		position: absolute;
+		top: 50px;
+		right: 50px;
+	}
+
+	.focus-area {
+		border: 1px solid #000;
+		height: 500px;
+		width: 100%;
+	}
+
+	#images .icon-thumbs-up {
+		-webkit-transition: 0.25s;
+		font-size:30px;
+		-webkit-transform-origin:80% 40%; /* Safari and Chrome */
+	}
+
+	#images .icon-thumbs-up:hover {
+		-webkit-transition: 0.5s;
+		font-size: 60px;
+	}
+
+	.selected {
+		-webkit-transition: 3s;
+		transform: translate(200px,200px) rotateY(180deg);	
+		-ms-transform: translate(200px,200px); /* IE 9 */
+		-webkit-transform: translate(200px,200px); /* Safari and Chrome */
+	}
+
+	/* ]]> */
+	</style>
+</head>
+<body>
+	<ul id="images" class="row-fluid">
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+		<li class="span3"><span class="icon-thumbs-up"></span></li>
+	</ul>
+	<div class="row-fluid">
+		<div class="focus-area">
+			
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$('.icon-thumbs-up').click(function() {
+			$('.icon-thumbs-up').removeClass('selected');
+			$(this).addClass('selected');
+		});
+	</script>
+</body>
+</html>
