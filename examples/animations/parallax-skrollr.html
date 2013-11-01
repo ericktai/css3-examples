@@ -5,8 +5,25 @@
 		height: 400px;
 		border: 1px solid #000;
 	}
-	img {
-		opacity: 0;
+
+	.content {
+		position: relative;
+	}
+
+	.stackmob {
+		background-image: url('../../img/office_large.jpg');
+		background-repeat: no-repeat;
+		background-position: bottom;
+		background-size: cover;
+		height: 100%;
+	}
+	.text {
+		color: #FFF;
+		font-family: arial;
+		font-size: 50px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
 	}
 	</style>
 </head>
@@ -17,16 +34,29 @@
 	
 	<div data-400="background-color:rgb(0,0,255);transform:rotate(0deg);" data-800="background-color:rgb(255,0,0);transform:rotate(90deg);">WOOOT</div>
 
-	<div class="spacer"></div>
+	<div class="spacer">
+		<div class="content">
+			<div class="stackmob" data-400="background-position-y: 0px;" data-800="background-position-y: -200px;"></div>	
+
+			<div class="text">
+				Waazzzup!
+			</div>
+		</div>
+		
+	</div>
 
 	<div data-800="background-color:rgb(0,0,255);transform:translateX(0px);" data-1200="background-color:rgb(255,0,0);transform:translateX(500px);">WOOOT</div>
 
 	<div class="spacer"></div>
 	<div class="spacer"></div>
 
-	<div data-1600="background-color:rgb(0,0,255);" data-2000="background-color:rgb(255,0,0);"><img data-1600="transform:opacity(0);" data-2000="transform:opacity(1);" src="http://css3.bradshawenterprises.com/images/Clown%20Fish.jpg" alt=""/></div>
+	<div data-1600="background-color:rgb(0,0,255);" data-2000="background-color:rgb(255,0,0);">
+		
+	</div>
 
-	<div class="spacer"></div>
+	<div class="spacer">
+		
+	</div>
 	<div class="spacer"></div>
 	<div class="spacer"></div>
 	<div class="spacer"></div>
