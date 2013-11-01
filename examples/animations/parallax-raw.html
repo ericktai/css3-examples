@@ -1,0 +1,83 @@
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<style type="text/css">
+	.spacer {
+		height: 200px;
+		border: 1px solid #000;
+		position: relative;
+	}
+
+	.stackmob {
+		background-image: url('../../img/office_large.jpg');
+		background-repeat: no-repeat;
+		background-position: bottom;
+		background-size: cover;
+		height: 100%;
+	}
+
+	.content {
+		color: #FFF;
+		font-family: arial;
+		font-size: 50px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	</style>
+</head>
+<body>
+	<section class="spacer">
+		
+	</section>
+	<section class="spacer"></section>
+	<section class="spacer">
+		
+	</section>
+	<section class="spacer"></section>
+	<section class="spacer"></section>
+	<section class="spacer"></section>
+	<section class="spacer">
+		<div class="stackmob" data-speed="4" data-type="background">
+			
+		</div>
+		<div class="content">
+			<div class="row-fluid">
+				<div class="span3">
+					Hello there!
+				</div>
+				<div class="span9">I am pretty cool yes?</div>
+			</div>	
+		</div>
+		
+	</section>
+	<section class="spacer"></section>
+	<section class="spacer"></section>
+	<section class="spacer"></section>
+	<section class="spacer"></section>
+	<section class="spacer"></section>
+	<script type="text/javascript">
+	$(document).ready(function(){
+   // cache the window object
+   $window = $(window);
+ 
+   $('div[data-type="background"]').each(function(){
+	     // declare the variable to affect the defined data-type
+	     var $scroll = $(this);
+	                     
+	      $(window).scroll(function() {
+	        // HTML5 proves useful for helping with creating JS functions!
+	        // also, negative value because we're scrolling upwards                             
+	        var yPos = -($window.scrollTop() / $scroll.data('speed')); 
+	         
+	        // background position
+	        var coords = '50% '+ yPos + 'px';
+	 
+	        // move the background
+	        $scroll.css({ backgroundPosition: coords });    
+	      }); // end window scroll
+	   });  // end section function
+	}); // close out script
+	</script>
+</body>
+</html>
